@@ -11,14 +11,75 @@
 
     <form action="/ex1" method="get">
         <h3>PIZZA ORDER</h3>
-
-        PIZZA : 
-        <select name="pizza">'
+        <h4>PIZZA</h4>
+        <b>프리미엄</b> : 
+        <select name="pirimumPizza">
             <option value="종류">피자 선택</option>
-            <option value="종류">피자 선택</option>
-            <option value="종류">피자 선택</option>
-            <option value="종류">피자 선택</option>
+            <option value="브리스킷 바비Q">브리스킷 바비Q</option>
+            <option value="치즈 크레이프 샌드">치즈 크레이프 샌드</option>
+            <option value="블랙타이거 슈림프">블랙타이거 슈림프</option>
+            <option value="와일드 와일드 웨스트 스테이크">와일드 와일드 웨스트 스테이크</option>
+            <option value="베스트 콰트로">베스트 콰트로</option>
         </select>
+
+        <br>
+        
+        <b>클래식</b> : 
+        <select name="pizza">
+            <option value="종류">피자 선택</option>
+            <option value="페퍼로니">페퍼로니</option>
+            <option value="포테이토">포테이토</option>
+            <option value="우리 고구마">우리 고구마</option>
+            <option value="뉴욕 오리진">뉴욕 오리진</option>
+            <option value="치즈">치즈</option>
+        </select>
+
+        <br> <br>
+        
+        <b>토핑 추가</b>  <br>
+        <input type="checkbox" name="topping" value="새우">
+        새우 추가 (+ 3000)
+        <br>
+
+        <input type="checkbox" name="topping" value="고구마">
+        고구마 추가 (+ 2000)
+        <br>
+
+        <input type="checkbox" name="topping" value="치즈">
+        치즈 추가 (+ 2000)
+        <br>
+
+        <input type="checkbox" name="topping" value="야채">
+        야채 추가 (+ 1000)
+        <br><br>
+
+        <b>기타 옵션</b> <br>
+        <input type="checkbox" name="opt" value="콜라">
+        콜라(1.5L 변경) +2500
+        <br>
+
+        <input type="checkbox" name="opt" value="피클">
+        피클  (+500)
+        <br>
+
+        <input type="checkbox" name="opt" value="엣지">
+        엣지 (고구마) +3000
+        <br>
+
+        <input type="checkbox" name="opt" value="엣지">
+        엣지 (치즈) +3000
+        <br>
+        <br>
+       
+
+        <b>주문자명</b> : <input type="text" name="orderName"> <br>
+        <b>배달 주소 </b>: <input type="text" name="orderAddress"><br>
+        <b>요청사항</b> : <input type="text" name="orderRequest" size="60">
+
+        <br>
+
+
+    <button style="background-color: rgb(252, 74, 74);">ORDER</button>
     </form>
     
 </body>
