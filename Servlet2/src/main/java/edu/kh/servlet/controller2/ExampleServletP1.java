@@ -4,16 +4,18 @@ import java.io.IOException;
 import java.io.PrintWriter;
 
 import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
+@WebServlet("/ex1")
 public class ExampleServletP1 extends HttpServlet{
 	
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		
-		String primumPizza = req.getParameter("primumPizza");
+		String primiumPizza = req.getParameter("primiumPizza");
 		String pizza = req.getParameter("pizza");
 		
 		String[] toppingOption = req.getParameterValues("topping");
@@ -27,7 +29,7 @@ public class ExampleServletP1 extends HttpServlet{
 		
 		int price = 0;
 	
-		switch (primumPizza) {
+		switch (primiumPizza) {
 		case "브리스킷 바비Q" : price += 29000;
 			break;
 		case "치즈 크레이프 샌드" : price += 29000;
@@ -78,7 +80,7 @@ public class ExampleServletP1 extends HttpServlet{
 				
 				switch(opt) {
 				case "콜라" : price += 2500; break;
-				case "피클" : price += 2500; break;
+				case "피클" : price += 500; break;
 				case "고구마 엣지" : price += 3000; break;
 				case "치즈 엣지" : price += 3000; break;
 				}
@@ -103,8 +105,8 @@ public class ExampleServletP1 extends HttpServlet{
 		sb.append(String.format("<h3>주소 : %s</h3>", orderAddress));
 		sb.append(String.format("<h3>요청사항 : %s</h3>", orderRequest));
 		
-		sb.append(String.format("<li>피자 : %s</li>", primumPizza));
-		sb.append(String.format("<li>피자 : %s</li>", pizza));
+		sb.append(String.format("피자 : %s", primiumPizza));
+		sb.append(String.format("피자 : %s", pizza));
 		
 		if(toppingOption != null) {			
 			sb.append("추가 토핑 선택 : ");
