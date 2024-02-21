@@ -12,7 +12,7 @@ import jakarta.servlet.http.HttpServletResponse;
 /* Servlet 작성 순서
  * 1) HttpServlet 상속 받기
  * 
- * 2) @WebServlet() 어노테아션 작성하기
+ * 2) @WebServlet() 어노테이션 작성하기
  * 
  * 3) doGet() 또는 doPost() 오버라이딩 -> 요청 method에 따라 수행
  * 
@@ -25,7 +25,7 @@ import jakarta.servlet.http.HttpServletResponse;
  * 6) 스트림을 통해서 응답 데이터(html코드) 출력하기
  * */
 
-// @WebServlet : <servlet>, <servlet-mapping. 태그를 컴파일
+// @WebServlet : <servlet>, <servlet-mapping> 태그를 컴파일
 //						 	컴파일시 추가하라는 어노테이션
 
 // 1) 현재 클래스를 Servlet 으로 등록 			-> <servlet>
