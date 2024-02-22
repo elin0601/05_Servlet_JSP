@@ -46,7 +46,7 @@ public class SignupServlet extends HttpServlet{
 		
 		// req.setAttribute("message", message); // 안됨
 		// -> redirect(재요청) 수행 시
-		// 이전 요처잉 담긴 request 객체가 삭제되고
+		// 이전 요청 담긴 request 객체가 삭제되고
 		// 새로운 요청 담긴 request 객체가 생성된다!!
 		
 		// -> 이전 request에 message가 세팅되었기 때문에
