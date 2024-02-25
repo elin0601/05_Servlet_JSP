@@ -28,6 +28,23 @@ public class TodoDetailServlet extends HttpServlet{
 			// index 번째 Todo를 조회하는 서비스 호출 후 결과 반환 받기
 			Todo todo = service.todoDetailView(index);
 			
+			if(todo == null) { // index가 잘못 입력된 경우
+				
+				// redirect
+				HttpSession session = req.getSession();
+				session.setAttribute("message", "index가 올바르지 않습니다");
+				resp.senRedirect("/");
+				
+				
+			} else { // 정상 범위 index인 경우
+				
+				// forward
+				req.setAttribute("todo", todo); // 위임 될 JSP에서 쓸 수 있게 세팅
+				
+				String path = "/WEB-INF/views/to/detail.jsp";
+				req.getRequestDispatcher(path).forward(req, resp);
+			}
+			
 			
 		} catch (Exception e) {
 			e.printStackTrace();
