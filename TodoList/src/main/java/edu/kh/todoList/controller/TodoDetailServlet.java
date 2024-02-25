@@ -10,6 +10,7 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
 
 @WebServlet("/todo/detail")
 public class TodoDetailServlet extends HttpServlet{
@@ -33,7 +34,7 @@ public class TodoDetailServlet extends HttpServlet{
 				// redirect
 				HttpSession session = req.getSession();
 				session.setAttribute("message", "index가 올바르지 않습니다");
-				resp.senRedirect("/");
+				resp.sendRedirect("/");
 				
 				
 			} else { // 정상 범위 index인 경우

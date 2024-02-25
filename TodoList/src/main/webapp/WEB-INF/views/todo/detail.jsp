@@ -1,34 +1,36 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
     
-<%@ taglib prefix="c" uri ="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="EUC-KR">
-<title>${todo.title}</title>
+	<meta charset="UTF-8">
 
+	<title>${todo.title}</title>
+	
 	<style>
 		.detail{
-			while-space : pre-wrap;
+			white-space: pre-wrap;
 		}
 	</style>
+
 </head>
 <body>
-
 	<ul>
-
-		<li>¡¶∏Ò : ${todo.title}</li>
-		<li>øœ∑· ø©∫Œ : 
+		<li>Ï†úÎ™© : ${todo.title}</li>
+		<li>
+			ÏôÑÎ£å Ïó¨Î∂Ä : 
 			<c:if test="${todo.complete}">O</c:if>
 			<c:if test="${not todo.complete}">X</c:if>
 		</li>
-
-		<li>µÓ∑œ¿œ : %{todo.regDate}</li>
-
+		
+		<li>Îì±Î°ùÏùº : ${todo.regDate}</li>
+		
 		<li class="detail">${todo.detail}</li>
-
 	</ul>
-
-</body>s
+	
+	
+</body>
 </html>
