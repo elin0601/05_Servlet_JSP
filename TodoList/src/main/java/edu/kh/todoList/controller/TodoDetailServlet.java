@@ -42,7 +42,7 @@ public class TodoDetailServlet extends HttpServlet{
 				// forward
 				req.setAttribute("todo", todo); // 위임 될 JSP에서 쓸 수 있게 세팅
 				
-				String path = "/WEB-INF/views/to/detail.jsp";
+				String path = "/WEB-INF/views/todo/detail.jsp";
 				req.getRequestDispatcher(path).forward(req, resp);
 			}
 			
